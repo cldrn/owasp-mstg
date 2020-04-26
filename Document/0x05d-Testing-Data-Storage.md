@@ -462,7 +462,9 @@ In the layout definition of an activity, you can define `TextViews` that have XM
         android:inputType="textNoSuggestions"/>
 ```
 
-The code for all input fields that take sensitive information should include this XML attribute to [disable the keyboard suggestions](https://developer.android.com/reference/android/text/InputType.html#TYPE_TEXT_FLAG_NO_SUGGESTIONS "Disable keyboard suggestions"):
+The code for all input fields that take sensitive information should include this XML attribute to [disable the keyboard suggestions](https://developer.android.com/reference/android/text/InputType.html#TYPE_TEXT_FLAG_NO_SUGGESTIONS "Disable keyboard suggestions").
+
+It is important to check for both keywords `textNoSuggestions` and `InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS` as the input type can also be changed dynamically from an Activity.
 
 #### Dynamic Analysis
 
